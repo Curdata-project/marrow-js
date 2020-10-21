@@ -39,3 +39,16 @@ result = {
 }
 
 ```
+
+method: `<actor_name>.<func_name>`
+
+### sqlite 支持
+
+```javascript
+function open(s);
+function get(s);
+function run(s);
+```
+
+
+
