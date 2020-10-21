@@ -45,9 +45,9 @@ method: `<actor_name>.<func_name>`
 ### sqlite 支持
 
 ```javascript
-function open(s);
-function get(s);
-function run(s);
+function open(s) -> index;
+function get(index, s);
+function run(index, s);
 ```
 
 
