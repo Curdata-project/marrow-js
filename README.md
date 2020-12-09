@@ -46,8 +46,8 @@ method: `<actor_name>.<func_name>`
 
 ```javascript
 function open(s) -> index;
-function get(index, s);
-function run(index, s);
+function _exist_table();
+function _run(index, s);
 ```
 
 
