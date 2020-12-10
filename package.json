@@ -1,7 +1,7 @@
 {
   "name": "marrow-js",
   "version": "1.0.0",
-  "description": "### request api",
+  "description": "A runtime framework for WebAssembly module compiled by 🦀️ Rust.",
   "main": "index.ts",
   "scripts": {
     "dev": "NODE_ENV=development nodemon index.ts",
@@ -18,7 +18,7 @@
       "pre-commit": "npm run lint:fix"
     }
   },
-  "keywords": [],
+  "keywords": ["TypeScript", "Rust", "WebAssembly", "Actor"],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -27,13 +27,14 @@
   "homepage": "https://github.com/Curdata-project/marrow-js#readme",
   "dependencies": {
     "@types/node": "^13.5.2",
+    "@types/sqlite3": "^3.1.6",
+    "@types/uuid": "^8.3.0",
     "axios": "^0.21.0",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^10.0.0",
     "sqlite3": "^5.0.0",
-    "uuid": "^8.3.1",
-    "@types/uuid": "^8.3.0"
+    "uuid": "^8.3.1"
   },
   "devDependencies": {
     "@types/koa": "2.11.6",

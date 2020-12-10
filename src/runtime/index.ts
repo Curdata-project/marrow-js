@@ -1,24 +1,10 @@
 import { _request } from "./request";
-import * as util from "util";
+import { _run } from "./sqlite";
+import { _print } from "./swap";
 
 export let preMemory: any;
 export let malloc: any;
 export let _result: any;
-
-const print = (s: number, size: number) => {
-  const value = preMemory.buffer.slice(s, s + size);
-  const utf8decoder = new util.TextDecoder();
-  console.log(utf8decoder.decode(value));
-};
-
-export const _get_tx_bytes = (arg: string) => {
-  const textEncoder = new util.TextEncoder();
-  const typedArray = textEncoder.encode(arg);
-  const ptr = malloc(typedArray.length);
-  const Uint8Memory = new Uint8Array(preMemory.buffer);
-  Uint8Memory.subarray(ptr, ptr + typedArray.length).set(typedArray);
-  return ptr;
-};
 
 const env = {
   memory: {
@@ -32,7 +18,8 @@ const env = {
     element: "anyfunc"
   }),
   _request,
-  print,
+  _run,
+  _print,
 };
 
 export const runModule = async (context: any[]) => {
@@ -51,5 +38,5 @@ export const runModule = async (context: any[]) => {
   preMemory = memory;
   malloc = __wbindgen_malloc;
   _result = __result;
-  main();
+  main(123213, 12);
 };
